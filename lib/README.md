@@ -15,8 +15,8 @@
   To get DYNAMIC LIBRARY libnum7.dylib: 
   
         g++ -std=c++14 -dynamiclib -o libnum7.dylib.1.0.0 num7.cpp # (num7.h in the same compiling folder)  
-        ln -s libnum7.so.1.0.0 libnum7.so.1 #create a soname symbolic link
-        ln -s libnum7.so.1.0.0 libnum7.so  #create a symbolic link for the library num7 name linker
+        ln -s libnum7.dylib.1.0.0 libnum7.dylib.1 #create a soname symbolic link
+        ln -s libnum7.dylib.1.0.0 libnum7.dylib  #create a symbolic link for the library num7 name linker
   
   To get num7.dmg: 
   
