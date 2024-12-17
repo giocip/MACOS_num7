@@ -2,10 +2,10 @@
 
   It may need: 
         
-        mkdir -p /usr/local/lib (libnum7.a and libnum7.dylib files position on system) 
+        mkdir -p /usr/local/lib (libnum7.a and libnum7.dylib file position on system) 
         mkdir -p /usr/local/include (num7.h header file position on system) 
-        mkdir -p /usr/local/bin (user app/executable files position on system) 
-        export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH (runtime environment variable)  
+        mkdir -p /usr/local/bin (user app/executable file position on system) 
+        export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH (runtime environment variable by dynamic library libnum7.dylib)  
  
   To get STATIC LIBRARY libnum7.a: 
   
