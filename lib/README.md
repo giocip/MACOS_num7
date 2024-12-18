@@ -5,7 +5,7 @@
         sudo mkdir -p /usr/local/lib (libnum7.a, libnum7.dylib and link libnum7.dylib.1.0.0 file position on system) 
         sudo mkdir -p /usr/local/include (num7.h header file position on system) 
         sudo mkdir -p /usr/local/bin (user app/executable file position on system) 
-        export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH (runtime environment variable by dynamic library libnum7.dylib => .zprofile .bashrc for permanent user)  
+        export DYLD_LIBRARY_PATH=/usr/local/lib:$DYLD_LIBRARY_PATH (runtime environment variable by dynamic libraries=> .zprofile and .bashrc files for permanent user)  
  
   To get STATIC LIBRARY libnum7.a: 
   
@@ -15,7 +15,6 @@
   To get DYNAMIC LIBRARY libnum7.dylib: 
   
         g++ -std=c++14 -dynamiclib num7.cpp -o libnum7.dylib -current_version 1.0.0 -compatibility_version 1.0.0 #num7.h in the same compiling folder  
-        ln -s libnum7.dylib libnum7.dylib.1.0.0 #library runtime link in /usr/local/lib folder with libnum7.dylib file
 
   To get num7.dmg: 
   
