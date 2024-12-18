@@ -14,15 +14,24 @@
   
   To get DYNAMIC LIBRARY libnum7.dylib: 
   
-        g++ -std=c++14 -dynamiclib -o libnum7.dylib.1.0.0 num7.cpp # (num7.h in the same compiling folder)  
-        ln -s libnum7.dylib.1.0.0 libnum7.dylib.1 #create a soname symbolic link
-        ln -s libnum7.dylib.1.0.0 libnum7.dylib  #create a symbolic link for the library num7 name linker
-  
+        g++ -std=c++14 -dynamiclib num7.cpp -o libnum7.dylib -current_version 1.0.0 -compatibility_version 1.0.0 # (num7.h in the same compiling folder)  
+        ln -s libnum7.dylib libnum7.dylib.1.0.0 #library runtime link
+
   To get num7.dmg: 
   
         hdiutil create -volname "num7" -srcfolder /tmp/num7 -ov -format UDZO num7.dmg (all files to package in /tmp/num7 folder)
       
-  To compile app: 
+  To put following folders : 
+
+            /usr/local/lib:      libnum7.a libnum7.dylib libnum7.dylib.1 libnum7.dylib.1.0.0 
+            /usr/local/include:  num7.h 
   
-        g++ -std=c++14 test_num7_eligibility.cpp -lnum7  
-      
+  To compile app: 
+
+        g++ -std=c++14 test_num7_eligibility.cpp /usr/local/lib/libnum7.a #STATIC LIBRARY 
+        g++ -std=c++14 test_num7_eligibility.cpp -lnum7 #DYNAMIC LIBRARY 
+
+  To check app/executable file:
+
+        otool -L /path/to/executable      
+        
