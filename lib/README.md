@@ -1,4 +1,4 @@
-# STATIC AND DYNAMIC num7 LIBRARIES  
+# STATIC AND DYNAMIC num7 LIBRARIES FOR macOS
 
   It may need: 
         
