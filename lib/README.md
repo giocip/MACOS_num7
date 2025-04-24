@@ -18,7 +18,11 @@
 
   To get num7.dmg: 
   
-        hdiutil create -volname "num7" -srcfolder /tmp/num7 -ov -format UDZO num7.dmg #all files to package in /tmp/num7 folder
+        hdiutil create -volname "num7" -srcfolder /tmp/num7 -ov -format UDZO num7.dmg #all files to package in /tmp/num7 folder 
+
+  To remove file security:
+
+        xattr -c num7.dmg
       
   To put following folders and files: 
   
